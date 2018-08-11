@@ -1,0 +1,43 @@
+
+.wallet-part .panel-body{
+	display: block;
+	margin-top: 50px;
+	margin-bottom: 115px;
+}
+.wallet-part .wallet-notice{
+	font-family: 'roboto_light' !important;
+	font-size: 20px;
+	color: #000;
+	display: block;
+}
+.wallet-part .cls-form{
+	position: relative;
+    margin-top: 110px;
+    padding: 0;
+}
+.backup{
+    margin-top: 125px;
+}
+.backup .backup-text{
+	font-family: 'SofiaProLight' !important;
+	font-size: 18px;
+	color: #384a68;
+	text-shadow: 0px 1px 0 #384a68;
+	display: block;
+	margin-bottom: 10px;
+}
+#qrcode{
+	padding: 50px;
+	margin-left: 150px;
+}
+@media (max-width: 768px){
+	#qrcode{
+		margin-left: 0;
+	}
+	.wallet-part .cls-form{
+		margin-top: 30px;
+	}
+	.backup{
+		margin-top: 30px;
+	}
+}

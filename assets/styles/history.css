@@ -1,0 +1,28 @@
+.history-part{
+	margin-bottom:90px;
+}
+.history-part .panel-body{
+	min-height: 560px;
+	display: block;
+	background: #fff;
+	margin-top: 30px;
+	padding: 45px 40px !important;
+}
+.history-table{
+	display: table;
+	width: 100%;
+}
+.history-table>thead>tr>th {
+	font-family: 'roboto_light' !important;
+	font-size: 20px;
+}
+.invest-action{
+	margin-top: 150px;
+	text-align: center;
+}
+.invest-text{
+	display: block;
+	font-family: 'SofiaProLight' !important;
+	font-size: 32px;
+	color: #384a68;
+}

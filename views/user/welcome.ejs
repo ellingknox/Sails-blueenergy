@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blue Energy Coin</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Chat -->
+    <link href="css/chat/jquery.jqplot.min.css" rel="stylesheet">
+    <link href="css/chat/jquery-ui.css" rel="stylesheet">
+    <link href="css/chat/jquery.jqplot.css" rel="stylesheet">
+
+
+   
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <!-- <link href="css/animate.css" rel="stylesheet"> -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="styles/fonts.css" rel="stylesheet">
+    <link href="styles/welcome.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-static-top navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <a class="btn btn-primary dropdown-btn" href="#"><i class="fa fa-bars"></i></a>
+                <a aria-expanded="false" role="button" href="#" class="dropdown-toggle flag_selected" data-toggle="dropdown"><i class="fa fa-angle-down"></i> ENG&nbsp;&nbsp;<img src="img/flag_eng.png"></a>
+                <ul role="menu" class="dropdown-menu opt_flag">
+                    <li><a href="#">ENG&nbsp;&nbsp;<img src="img/flag_eng.png"></a></li>
+                    <li><a href="#">RUS&nbsp;&nbsp;<img src="img/flag_rus.png"></a></li>
+                    <li><a href="#">SPA&nbsp;&nbsp;<img src="img/flag_spa.png"></a></li>
+                    <li><a href="#">FRA&nbsp;&nbsp;<img src="img/flag_fra.png"></a></li>
+                </ul>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="top-link">
+                    <span class="total-balance"><img src="img/wallet-icon.png" style="margin-top: -5px;"> &nbsp;<span style="color:#384a68;"> FIAT balance: </span>&nbsp;&nbsp;&nbsp;<strong><span>0</span> </strong></span>
+                </li>
+                <li class="top-link">
+                    <span class="total-balance"><img src="img/balance-icon.png" style="margin-top: -5px;"> &nbsp;<span style="color:#384a68;"> Token balance: </span>&nbsp;&nbsp;&nbsp;<strong><span>0</span> BEAN</strong></span>
+                </li>
+                <li class="dropdown top-link">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa img-icon"><img src="img/alert-icon.png"></i> <i class="fa fa-angle-down white-color"></i></a>
+                    <ul class="dropdown-menu alert-dropdown fa">
+                        <li>
+                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">View All</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown top-link">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa img-icon"><img src="img/user-icon.png"></i><span class="username" style="color: white;"> <%=username%> </span><i class="fa fa-angle-down white-color"></i></a>
+                    <ul class="dropdown-menu fa">
+                        <!-- <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                        </li> -->
+                        <li>
+                            <a href="/settings"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/logout"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <nav class="navbar-default navbar-static-side side-nav" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav side-navbar" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <a href="/welcome">
+                                <img alt="image" src="img/dashboard-logo.png" style="display: inline-block;">
+                            </a>
+                            <span class="profile-text"><strong class="font-bold">Blue Energy</strong> Wallet</span>
+                        </div>
+                    </li>
+                    <li class="active">
+                        <a href="/welcome"><img src="img/dashboard-icon.png"><span class="nav-label">Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="/history"><img src="img/history-icon.png"><span class="nav-label">Transaction History</span></a>
+                    </li>
+                    <li>
+                        <a href="/address"><img src="img/address-icon.png"><span class="nav-label">Account Address</span></a>
+                    </li>
+                    <li>
+                        <a href="/send"><img src="img/send-icon.png"><span class="nav-label">Send</span></a>
+                    </li>
+                    <li>
+                        <a href="/logout"><img src="img/logout-icon.png"><span class="nav-label">Log out</span></a>
+                    </li>
+                </ul>
+                <div class="in_sidebar_bt_links">
+                    <a href="/welcome" target="_blank">Terms</a>
+                    <a href="/welcome" target="_blank">Blog</a>
+                    <a href="/welcome" target="_blank">FAQ</a>
+                </div>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="cotainer-fluid">
+                <div class="row">
+                    <div class="col-md-12 header-part">
+                        <span class="part-title">
+                            The ICO is over!
+                        </span>
+                        <p>Now we will need to audit the funds and apply for licences. To ensure high capital, high BEAN token price and dividend return, we need to have as much verified funds as possible. Would you be welling to verify your BEAN tokens purchase and help BEAN become a success, fill in our special form. Your information will be protected with strict accordance to the EU Data Protection standard.</p>
+                    </div>
+                    <div class="col-md-12 payment-part">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="panel-heading">
+                                    <span class="panel-title"><span class="title-border">Choose</span> Payment</span>
+                                </div>
+                                <div class="currency-wrap">
+                                    <!--BTC-->
+                                    <lavel class="currency-item">
+                                        <a href="bitcoin" class="currency-link tab-link active" data-type="bitcoin" >
+                                          <span class="currency-picwrap">
+                                              <img src="img/btc.png" alt class="currency-pic">
+                                          </span>
+                                          <span class="currency-right">
+                                              <span class="currency-title">Bitcoin</span>
+                                              <span class="currency-exchange">1 BTC = 821706 BEAN </span>
+                                          </span>
+                                        </a>
+                                    </lavel>
+                                    <!--ETH-->
+                                    <lavel class="currency-item">
+                                        <a href="ethereum" class="currency-link tab-link" data-type="ethereum">
+                                          <span class="currency-picwrap">
+                                              <img src="img/eth.png" alt class="currency-pic">
+                                          </span>
+                                          <span class="currency-right">
+                                              <span class="currency-title">Ethereum</span>
+                                              <span class="currency-exchange">1 BTC = 37904 BEAN</span>
+                                          </span>
+                                        </a>
+                                    </lavel>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <form class="cls-form">
+                                    <div class="input-group">
+                                        <span class="hint">Address</span>
+                                        <a href="javascript;" class="btn-inputRight btn-copy btn-copy-0"  onclick="copyToClipboard()">
+                                          <span class="copied-txt">
+                                          <i class="fa fa-fw fa-check"></i>Copied
+                                          </span>
+                                          <span class="copy-txt">copy</span>
+                                        </a>
+                                        <div class="stretchBox">
+                                            <!-- <input type="text" name="address" class="qrcode-val" value="1PJbncWV7nbr4ubNh1W4ZGCzznRcQHEiRZ">
+                                            </input> -->
+                                          <div class="input">
+                                            <span class="source">1LFH5zrPi2i13yGfaahgfAZJYHtECcpS5U</span>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-3">
+                                <div id="qrcode"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 state-part">
+                        <div class="panel-heading">
+                            <span class="panel-title"><span class="title-border">Current</span> State</span>
+                        </div>
+                        <div class="panel-body">
+                            <ul class="current-state">
+                                <li class="list-title"> INVESTED: </li>
+                                <li>
+                                  <span class="state-picwrap">
+                                      <img src="img/btc-icon.png" class="currency-pic" height="60px">
+                                  </span>
+                                  <span class="state-right">
+                                      <span class="state-title">BTC</span>
+                                      <span class="state-exchange">0</span>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span class="state-picwrap">
+                                      <img src="img/eth-icon.png" class="currency-pic" height="60px">
+                                  </span>
+                                  <span class="state-right">
+                                      <span class="state-title">ETH</span>
+                                      <span class="state-exchange">0</span>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span class="state-picwrap">
+                                      <img src="img/usd-icon.png" class="currency-pic" height="60px">
+                                  </span>
+                                  <span class="state-right">
+                                      <span class="state-title">USD</span>
+                                      <span class="state-exchange">0</span>
+                                  </span>
+                                </li>
+                            </ul>
+                            <div class="state-text">
+                                <span class="type1" style="margin-right: 20px">TOKENS CONTRIBUTED IN TOTAL: </span>
+                                <span class="type2" style="margin-right: 80px">0 BTC ($ 0)</span>
+                                <span class="type1" style="margin-right: 20px">INVESTORS: </span>
+                                <span class="type2" style="margin-right: 20px">0</span>
+                                <span><img src="img/invester-icon.png"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-12 bonus-part">
+                        <div class="panel-heading">
+                            <span class="panel-title"><span class="title-border">Bonuse</span>s</span>
+                        </div>
+                        <div class="panel-body">
+                            <div class="bonus-container">
+                                <div id="chart" class="jqplot-target" style="max-width: 840px; height: 200px; margin-left: -20px;"></div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col-md-12 rate-part">
+                        <div class="panel-heading">
+                            <span class="panel-title"><span class="title-border">Rates&nbsp;&nbsp;  </span></span>
+                        </div>
+                        <div class="panel-body">
+                            <span class="rate-title">BEAN TOKEN PRICE:</span>
+                            <ul class="rates">
+                                <li>
+                                  <span class="rates-picwrap">
+                                      <img src="img/btc-icon.png" class="currency-pic" height="60px">
+                                  </span>
+                                  <span class="rates-right">
+                                    <span class="rates-title">BTC&nbsp; = &nbsp;</span>
+                                    <span class="rates-exchange">0.00000121</span>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span class="rates-picwrap">
+                                      <img src="img/eth-icon.png" class="currency-pic" height="60px">
+                                  </span>
+                                  <span class="rates-right">
+                                    <span class="rates-title">ETH&nbsp; = &nbsp;</span>
+                                    <span class="rates-exchange">0.0000264</span>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span class="rates-picwrap">
+                                      <img src="img/usd-icon.png" class="currency-pic" height="60px">
+                                  </span>
+                                  <span class="rates-right">
+                                    <span class="rates-title">USD&nbsp; = &nbsp;</span>
+                                    <span class="rates-exchange">0.01</span>
+                                  </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="pull-right right-text">
+                    Have any questions? Please contact us at support@gmail.com
+                </div>
+                <div class="left-text">
+                    &copy; 2017 Blue Energy, All rights reserved
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mainly scripts -->
+    <!-- <script src="/js/dependencies/sails.io.js"></script> -->
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script> -->
+    <!-- <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script> -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.dropdown-btn').click(function(){
+                $('#side-menu').slideToggle("slow");
+            });
+            $(window).resize(function(){
+                if ($(window).width() > 768) {
+                    $('#side-menu').show();
+                }
+            });
+            //Active control in Choose Payment
+            $('.currency-link').click(function() {
+              $('.currency-link').removeClass('active');
+              $('.btn-copy').removeClass('copied');
+              $(this).addClass('active');
+              var coin = $(this).attr("href");
+              $('#qrcode').children().remove();
+              if (coin == 'bitcoin') {
+                $('.source').text('1LFH5zrPi2i13yGfaahgfAZJYHtECcpS5U');
+                $('#qrcode').qrcode({
+                    width: 200,
+                    height: 200,
+                    text: "1LFH5zrPi2i13yGfaahgfAZJYHtECcpS5U"
+                });
+
+              }else if (coin == 'ethereum') {
+                $('.source').text('0x5FC9bEd3Ddde4a05bFAA8638226dC93660f32B6A');
+                $('#qrcode').qrcode({
+                    width: 200,
+                    height: 200,
+                    text: "0x5FC9bEd3Ddde4a05bFAA8638226dC93660f32B6A"
+                });
+              }
+              return false;
+            });
+            $('.btn-copy').click(function(){
+              $(this).addClass('copied');
+                return false;
+            });
+
+            $('#qrcode').qrcode({
+                width: 200,
+                height: 200,
+                text: "1LFH5zrPi2i13yGfaahgfAZJYHtECcpS5U"
+            });
+        });
+        function copyToClipboard() {
+          var $temp = $("<input>");
+          $("body").append($temp);
+          $temp.val($('.source').text()).select();
+          document.execCommand("copy");
+          $temp.remove();
+        }
+    </script>
+    
+    <!-- Chat plugin -->
+    <script src="js/chat/jquery.min.js"></script>
+    <script src="js/chat/jquery.jqplot.min.js"></script>
+    <script src="js/chat/jqplot.barRenderer.js"></script>
+    <script src="js/chat/jqplot.pieRenderer.js"></script>
+    <script src="js/chat/jqplot.categoryAxisRenderer.js"></script>
+    <script src="js/chat/jqplot.pointLabels.js"></script>
+    <script src="js/chat/jqplot.logAxisRenderer.min.js"></script>
+    <script src="js/excanvas.js"></script>
+    
+    <!-- Custom and plugin javascript -->
+    <script src="js/jquery.qrcode.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $.jqplot.config.enablePlugins = true;
+            var s1 = [25, 20, 15, 10, 5, 0];
+            var ticks = ['1-2 Day ICO', 'Day 3-7', 'week2', 'week3', 'week4', 'week5'];
+             
+            plot1 = $.jqplot('chart', [s1], {
+                animate: !$.jqplot.use_excanvas,
+                seriesDefaults:{
+                    renderer:$.jqplot.BarRenderer,
+                    rendererOptions: {
+                    },
+                    shadow: false,
+                    showMarker: false,
+                    pointLabels: { show: true },
+                    color: '#1f88a7',
+                },
+                grid: {
+                    background: 'rgba(57,57,57,0.0)',
+                    drawBorder: false,
+                    shadow: false,
+                    gridLineColor: '#f0f0f0',
+                    drawGridLines: false
+                },
+                legend: {
+                    show: false,
+                },
+                axes: {
+                    xaxis: {
+                        renderer: $.jqplot.CategoryAxisRenderer,
+                        ticks: ticks,
+                        pad: 0,
+                    },
+                    yaxis: {
+                        showTicks: false,
+                        numberTicks: '8',
+                    }
+                },
+                highlighter: { show: false }
+            });
+        });
+    </script>
+
+</body>
+</html>

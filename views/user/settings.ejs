@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blue Energy Coin</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <!-- <link href="css/animate.css" rel="stylesheet"> -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="styles/fonts.css" rel="stylesheet">
+    <link href="styles/welcome.css" rel="stylesheet" type="text/css">
+    <link href="styles/settings.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-static-top navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <a class="btn btn-primary dropdown-btn" href="#"><i class="fa fa-bars"></i></a>
+                <a aria-expanded="false" role="button" href="#" class="dropdown-toggle flag_selected" data-toggle="dropdown"><i class="fa fa-angle-down"></i> ENG&nbsp;&nbsp;<img src="img/flag_eng.png"></a>
+                <ul role="menu" class="dropdown-menu opt_flag">
+                    <li><a href="#">ENG&nbsp;&nbsp;<img src="img/flag_eng.png"></a></li>
+                    <li><a href="#">RUS&nbsp;&nbsp;<img src="img/flag_rus.png"></a></li>
+                    <li><a href="#">SPA&nbsp;&nbsp;<img src="img/flag_spa.png"></a></li>
+                    <li><a href="#">FRA&nbsp;&nbsp;<img src="img/flag_fra.png"></a></li>
+                </ul>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="top-link">
+                    <span class="total-balance"><img src="img/wallet-icon.png" style="margin-top: -5px;"> &nbsp;<span style="color:#384a68;"> FIAT balance: </span>&nbsp;&nbsp;&nbsp;<strong><span>0</span> </strong></span>
+                </li>
+                <li class="top-link">
+                    <span class="total-balance"><img src="img/balance-icon.png" style="margin-top: -5px;"> &nbsp;<span style="color:#384a68;"> Token balance: </span>&nbsp;&nbsp;&nbsp;<strong><span>0</span> BEAN</strong></span>
+                </li>
+                <li class="dropdown top-link">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa img-icon"><img src="img/alert-icon.png"></i> <i class="fa fa-angle-down white-color"></i></a>
+                    <ul class="dropdown-menu alert-dropdown fa">
+                        <li>
+                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">View All</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown top-link">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa img-icon"><img src="img/user-icon.png"></i><span class="username"> <%=username%> </span><i class="fa fa-angle-down white-color"></i></a>
+                    <ul class="dropdown-menu fa">
+                        <!-- <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                        </li> -->
+                        <li>
+                            <a href="/settings"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/logout"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <nav class="navbar-default navbar-static-side side-nav" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav side-navbar" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <a href="/welcome">
+                                <img alt="image" src="img/dashboard-logo.png" style="display: inline-block;">
+                            </a>
+                            <span class="profile-text"><strong class="font-bold">Blue Energy</strong> Wallet</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/welcome"><img src="img/dashboard-icon.png"><span class="nav-label">Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="/history"><img src="img/history-icon.png"><span class="nav-label">Transaction History</span></a>
+                    </li>
+                    <li>
+                        <a href="/address"><img src="img/address-icon.png"><span class="nav-label">Account Address</span></a>
+                    </li>
+                    <li>
+                        <a href="/send"><img src="img/send-icon.png"><span class="nav-label">Send</span></a>
+                    </li>
+                    <li>
+                        <a href="/logout"><img src="img/logout-icon.png"><span class="nav-label">Log out</span></a>
+                    </li>
+                </ul>
+                <div class="in_sidebar_bt_links">
+                    <a href="/welcome" target="_blank">Terms</a>
+                    <a href="/welcome" target="_blank">Blog</a>
+                    <a href="/welcome" target="_blank">FAQ</a>
+                </div>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="cotainer-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel blank-panel settings-panel">
+                            <div class="panel-heading">
+                                <div class="panel-options">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a data-toggle="tab" href="#tab-1">ACCOUNT</a></li>
+                                        <li class=""><a data-toggle="tab" href="#tab-2">VERIFICATION</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="tab-content">
+                                    <div id="tab-1" class="tab-pane active">
+                                        <span class="title-info">PERSONAL INFORMATION</span>
+                                        <form action="/" method="post" role = "role" id="personal-form" class="account-form">
+                                            <div class="row">
+                                                <div class="form-group col-md-6 padding1">
+                                                    <label class="control-label infotitle" >
+                                                        First Name
+                                                    </label>
+                                                    <input type="text" name="firstname" class="form-control" required value="<%=infor.firstname%>" autocomplete="off" placeholder="Enter Your First Name">
+                                                </div>
+                                                <div class="form-group col-md-6 padding1">
+                                                    <label class="control-label infotitle" >
+                                                        Last Name
+                                                    </label>
+                                                    <input type="text" name="lastname" class="form-control" required value="<%=infor.lastname%>" autocomplete="off" placeholder="Enter Your Last Name">
+                                                </div>
+                                                <div class="form-group col-md-6 padding1">
+                                                    <label class="control-label infotitle" >
+                                                        Email
+                                                    </label>
+                                                    <input type="email" name="email" class="form-control" required value="<%=useremail%>" autocomplete="off" placeholder="Enter Your Email">
+                                                </div>
+                                                <div class="form-group col-md-6 padding1">
+                                                    <label class="control-label infotitle" >
+                                                        Phone Number
+                                                    </label>
+                                                    <input type="text" name="phonenum" class="form-control" required value="<%=infor.phonenum%>" autocomplete="off" placeholder="Enter Number">
+                                                </div>
+                                                <div class="form-group col-md-6 padding1">
+                                                    <label class="control-label infotitle" >
+                                                        State
+                                                    </label>
+                                                    <input type="text" name="state" class="form-control" required value="<%=infor.state%>" autocomplete="off" placeholder="Enter State">
+                                                </div>
+                                                <div class="form-group col-md-6 padding1">
+                                                    <label class="control-label infotitle" >
+                                                        Country
+                                                    </label>
+                                                    <label class="custom-select fa">
+                                                        <select name="country" class="form-control" id="country">
+                                                        </select>
+                                                    </label>
+                                                </div>
+                                                <div class="form-group col-md-6 padding1">
+                                                    <a href="" class="btn1 action-btn" id="infor_save">SAVE</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <hr>
+                                        <form action="/" method="post" role = "role" id="password-form" class="account-form">
+                                            <div class="row">
+                                                <div class="form-group col-md-6 padding1">
+                                                    <label class="control-label infotitle" >
+                                                        Old Password
+                                                    </label>
+                                                    <input type="password" name="oldpassword" class="form-control"value="" autocomplete="off" placeholder="Old Password">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-md-6 padding1">
+                                                    <label class="control-label infotitle" >
+                                                        New Password
+                                                    </label>
+                                                    <input type="password" name="newpassword" class="form-control" required value="" autocomplete="off" placeholder="New Password">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group col-md-6 padding1">
+                                                    <label class="control-label infotitle" >
+                                                        Repeat New Password
+                                                    </label>
+                                                    <input type="password" name="repeatpassword" class="form-control" required value="" autocomplete="off" placeholder="Repeat Password">
+                                                </div>
+                                                <div class="form-group col-md-6 padding1" style="padding-top: 17px">
+                                                    <a href="#" class="btn1 action-btn" id="pass_save" style="width: 305px;">CHANGE PASSWORD</a>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div id="tab-2" class="tab-pane">
+                                        <span class="title-info">Online Credit Card Payment</span>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="panel blank-panel payment-panel">
+                                                    <div class="panel-heading">
+                                                        <div class="panel-options">
+                                                            <ul class="nav nav-tabs">
+                                                                <li class="active"><a data-toggle="tab" href="#pay-1">STEP1</a></li>
+                                                                <li class=""><a data-toggle="tab" href="#pay-2">STEP2</a></li>
+                                                                <li class=""><a data-toggle="tab" href="#pay-3">STEP3</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="tab-content">
+                                                            <div id="pay-1" class="tab-pane active">
+                                                                <span class="pay-pan-title">SELECT YOUR BANK</span>
+                                                                <p class="express">Select the bank from which you would like to make your Bank credit card payment</p>
+                                                                <form action="/" method="post" role = "role" id="bank-form">
+                                                                    <div class="form-group">
+                                                                        <label class="custom-select-bank fa">
+                                                                            <select name="bank" class="form-control" id="bank">
+                                                                                <option>Select</option>
+                                                                                <option>option1</option>
+                                                                                <option>option2</option>
+                                                                                <option>option3</option>
+                                                                                <option>option4</option>
+                                                                            </select>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <a href="#" class="btn1 load-btn">PROCEED</a>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            <div id="pay-2" class="tab-pane">
+                                                                <span class="pay-pan-title">PROVIDE YOUR BANK CREDIT CARD DETAILS</span>
+                                                                <p class="express">Please enter your 15/16 digit Bank Credit Card number and payment amount</p>
+                                                                <form action="/" method="post" role = "role" id="card-form">
+                                                                    <div class="row row-margin">
+                                                                        <div class="col-md-4">
+                                                                            <label class="control-label infotitle" >
+                                                                                Select Card type.*
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="col-md-8 col-padding">
+                                                                            <div class="card-wrapper">
+                                                                                <span class="card-type">
+                                                                                    <input type="radio" name="card" required>
+                                                                                    <img src="img/card1.png">
+                                                                                </span>
+                                                                                <span class="card-type">
+                                                                                    <input type="radio" name="card" required>
+                                                                                    <img src="img/card2.png">
+                                                                                </span>
+                                                                                <span class="card-type">
+                                                                                    <input type="radio" name="card" required>
+                                                                                    <img src="img/card3.png">
+                                                                                </span>
+                                                                                <span class="card-type">
+                                                                                    <input type="radio" name="card" required>
+                                                                                    <img src="img/card4.png">
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row row-margin">
+                                                                        <div class="col-md-4">
+                                                                            <label class="control-label infotitle" >
+                                                                                Enter ICIC Bank Credit Card No.*
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="col-md-8">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-3 col-padding">
+                                                                                    <input type="text" required>
+                                                                                </div>
+                                                                                <div class="col-xs-3 col-padding" required>
+                                                                                    <input type="text" required>
+                                                                                </div>
+                                                                                <div class="col-xs-3 col-padding">
+                                                                                    <input type="text" required>
+                                                                                </div>
+                                                                                <div class="col-xs-3 col-padding">
+                                                                                    <input type="text" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row row-margin">
+                                                                        <div class="col-md-4">
+                                                                            <label class="control-label infotitle" >
+                                                                                Re-enter ICIC Bank Credit Card No.*
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="col-md-8">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-3 col-padding">
+                                                                                    <input type="text" required>
+                                                                                </div>
+                                                                                <div class="col-xs-3 col-padding">
+                                                                                    <input type="text" required>
+                                                                                </div>
+                                                                                <div class="col-xs-3 col-padding">
+                                                                                    <input type="text" required>
+                                                                                </div>
+                                                                                <div class="col-xs-3 col-padding">
+                                                                                    <input type="text" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row row-margin">
+                                                                        <div class="col-md-4">
+                                                                            <label class="control-label infotitle" >
+                                                                                Mobile No.*
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="col-md-8">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6 col-padding">
+                                                                                    <input type="text" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row row-margin">
+                                                                        <div class="col-md-4">
+                                                                            <label class="control-label infotitle" >
+                                                                                Email ID.*
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="col-md-8">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6 col-padding">
+                                                                                    <input type="text" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row row-margin">
+                                                                        <div class="col-md-4">
+                                                                            <label class="control-label infotitle" >
+                                                                                Payment Amount (Rs.) *
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="col-md-8">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6 col-padding">
+                                                                                    <input type="text" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row row-margin">
+                                                                        <div class="col-md-4">
+                                                                            <label class="control-label infotitle" >
+                                                                                Selected Bank
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="col-md-8">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-6 col-padding">
+                                                                                    <input type="text" required>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                                <p class="notice-text">
+                                                                    * Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum neque odio, id suscipit augue rhoncus eget. Ut auctor 
+                                                                    purus vel justo pharetra ornare.
+                                                                </p>
+                                                                <a href="#" class="btn1 load-btn">PAY NOW</a>
+                                                            </div>
+                                                            <div id="pay-3" class="tab-pane">
+                                                                <span class="pay-pan-title">PLEASE CONFIRM</span>
+                                                                <p class="express">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                                <div class="row payitem">
+                                                                    <div class="col-md-12 col-item">
+                                                                        <span class="payitem-title">To Mobile:</span>
+                                                                        <span class="payitem-value">+ 987 654 3210</span>
+                                                                    </div>
+                                                                    <div class="col-md-12 col-item">
+                                                                        <span class="payitem-title">Description:</span>
+                                                                        <span class="payitem-value">Loreum lpsum Dolar Sit</span>
+                                                                    </div>
+                                                                    <div class="col-md-12 col-item">
+                                                                        <span class="payitem-title">From:</span>
+                                                                        <span class="payitem-value">Westpac Choice 032-000 000000 $167.00</span>
+                                                                    </div>
+                                                                    <div class="col-md-12 col-item">
+                                                                        <span class="payitem-title">Amount:</span>
+                                                                        <span class="payitem-value">$529.00</span>
+                                                                    </div>
+                                                                    <div class="col-md-12 col-item">
+                                                                        <span class="payitem-title">Date:</span>
+                                                                        <span class="payitem-value">17 Nov 2017</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="btn-action">
+                                                                    <a href="#" class="btn1 load-btn" style="width: 300px; margin-right: 13px;">GO BACK AND EDIT</a>
+                                                                    <a href="#" class="btn3 load-btn">CONFIRM</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="pull-right right-text">
+                    Have any questions? Please contact us at support@gmail.com
+                </div>
+                <div class="left-text">
+                    &copy; 2017 Blue Energy, All rights reserved
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mainly scripts -->
+    <!-- <script src="/js/dependencies/sails.io.js"></script> -->
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="js/jquery.qrcode.min.js"></script>
+    <script src="js/country.js"></script>
+    <script type="text/javascript">
+        populateCountries('country');
+
+        $(document).ready(function(){
+            $('.dropdown-btn').click(function(){
+                $('#side-menu').slideToggle("slow");
+            });
+            $(window).resize(function(){
+                if ($(window).width() > 768) {
+                    $('#side-menu').show();
+                }
+            });
+            $('#country option')
+              .removeAttr('selected')
+              .filter("[value='<%=infor.country%>']")
+              .attr('selected', true);
+            $('#infor_save').click(function(){
+                var text = $(this).text();
+                $(this).text('');
+                $(this).append('<i class="fa fa-spinner"></i>');
+
+                var firstname = $("input[name='firstname']").val();
+                var lastname = $("input[name='lastname']").val();
+                var email = $("input[name='email']").val();
+                var phonenum = $("input[name='phonenum']").val();
+                var state = $("input[name='state']").val();
+                var country = $('#country').val();
+                console.log(text);
+                // return false;
+                $.post(
+                    '/saveinfor',
+                    { firstname: firstname, lastname: lastname, email: email, phonenum: phonenum, state: state, country: country },
+                    function(res){
+                        // console.log(data);
+                        alert('Successfully saved');
+                        $('#infor_save').text(text);
+                    }
+                ).fail(function(res){
+                    alert('Save Faild');
+                    // console.log("faild");
+                    $('#infor_save').text(text);
+                });
+                return false;
+            });
+            $('#pass_save').click(function(){
+                var text = $(this).text();
+                $(this).text('');
+                $(this).append('<i class="fa fa-spinner"></i>');
+                var oldpassword = $("input[name='oldpassword']").val();
+                var newpassword = $("input[name='newpassword']").val();
+                var repeatpassword = $("input[name='repeatpassword']").val();
+                if (oldpassword == '') {
+                    alert('Enter Your Current Password!');
+                    $("input[name='oldpassword']").focus();
+                    $(this).text(text);
+                    return false;
+                }
+                if (newpassword == '') {
+                    alert('Enter Your New Password!');
+                    $("input[name='newpassword']").focus();
+                    $(this).text(text);
+                    return false;
+                }
+                if (newpassword != repeatpassword) {
+                    alert('Retype Confirm Password!');
+                    $("input[name='repeatpassword']").focus();
+                    $(this).text(text);
+                    return false;
+                }
+                console.log(newpassword);
+                $.post(
+                    '/savepassword',
+                    { oldpassword: oldpassword, newpassword: newpassword },
+                    function(res){
+                        if (res == '0') {
+                            alert("Faild: Error occured!");
+                            console.log("Error");
+                        }
+                        else if (res == '1') {
+                            alert('Successfully changed!');
+                            console.log("success");
+                        }
+                        else if (res == '2') {
+                            alert("Faild: Old Password not matched!");
+                            $("input[name='oldpassword']").focus();
+                            console.log("not matched");
+                        }
+                        $('#pass_save').text(text);
+                    }
+                ).fail(function(res){
+                    alert('Change Faild!');
+                    console.log("faild");
+                    $('#pass_save').text(text);
+                });
+                return false;
+            });
+            //Active control in Choose Payment
+            // $('.currency-link').click(function() {
+            //   $('.currency-link').removeClass('active');
+            //   $('.btn-copy').removeClass('copied');
+            //   $(this).addClass('active');
+            //   var coin = $(this).attr("href");
+            //   $('#qrcode').children().remove();
+            //   if (coin == 'bitcoin') {
+            //     $('.source').text('1LFH5zrPi2i13yGfaahgfAZJYHtECcpS5U');
+            //     $('#qrcode').qrcode({
+            //         width: 200,
+            //         height: 200,
+            //         text: "1LFH5zrPi2i13yGfaahgfAZJYHtECcpS5U"
+            //     });
+
+            //   }else if (coin == 'ethereum') {
+            //     $('.source').text('0x5FC9bEd3Ddde4a05bFAA8638226dC93660f32B6A');
+            //     $('#qrcode').qrcode({
+            //         width: 200,
+            //         height: 200,
+            //         text: "0x5FC9bEd3Ddde4a05bFAA8638226dC93660f32B6A"
+            //     });
+            //   }
+            //   return false;
+            // });
+            $('.load-btn').click(function(){
+                var text = $(this).text();
+                // $(this).addClass('loading');
+                $(this).text('');
+                $(this).append('<i class="fa fa-spinner"></i>');
+                loadingAction($(this), text);
+                return false;
+            });
+            $('.btn-copy').click(function(){
+              $(this).addClass('copied');
+                return false;
+            });
+
+        });
+        function loadingAction(element, text){
+            setTimeout(function(){
+                // element.removeClass('loading');
+                element.text(text);
+            }, 5000);
+        };
+        function copyToClipboard() {
+          var $temp = $("<input>");
+          $("body").append($temp);
+          $temp.val($('.source').text()).select();
+          document.execCommand("copy");
+          $temp.remove();
+        }
+    </script>
+    
+</body>
+</html>

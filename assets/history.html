@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Account Address</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <!-- <link href="css/animate.css" rel="stylesheet"> -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="styles/fonts.css" rel="stylesheet">
+    <link href="styles/welcome.css" rel="stylesheet" type="text/css">
+    <link href="styles/history.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-static-top navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <a class="btn btn-primary dropdown-btn" href="#"><i class="fa fa-bars"></i></a>
+                <a aria-expanded="false" role="button" href="#" class="dropdown-toggle flag_selected" data-toggle="dropdown"><i class="fa fa-angle-down"></i> ENG&nbsp;&nbsp;<img src="img/flag_eng.png"></a>
+                <ul role="menu" class="dropdown-menu opt_flag">
+                    <li><a href="#">ENG&nbsp;&nbsp;<img src="img/flag_eng.png"></a></li>
+                    <li><a href="#">RUS&nbsp;&nbsp;<img src="img/flag_rus.png"></a></li>
+                    <li><a href="#">SPA&nbsp;&nbsp;<img src="img/flag_spa.png"></a></li>
+                    <li><a href="#">FRA&nbsp;&nbsp;<img src="img/flag_fra.png"></a></li>
+                </ul>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="top-link">
+                    <span class="total-balance"><img src="img/wallet-icon.png" style="margin-top: -5px;"> &nbsp;<span style="color:#384a68;"> FIAT balance: </span>&nbsp;&nbsp;&nbsp;<strong><span>3025</span> </strong></span>
+                </li>
+                <li class="top-link">
+                    <span class="total-balance"><img src="img/balance-icon.png" style="margin-top: -5px;"> &nbsp;<span style="color:#384a68;"> Token balance: </span>&nbsp;&nbsp;&nbsp;<strong><span>5000</span> BEAN</strong></span>
+                </li>
+                <li class="dropdown top-link">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa img-icon"><img src="img/alert-icon.png"></i> <i class="fa fa-angle-down white-color"></i></a>
+                    <ul class="dropdown-menu alert-dropdown fa">
+                        <li>
+                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">View All</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown top-link">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa img-icon"><img src="img/user-icon.png"></i><span style="color: white;"> <%=username%> </span><i class="fa fa-angle-down white-color"></i></a>
+                    <ul class="dropdown-menu fa">
+                        <!-- <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                        </li> -->
+                        <li>
+                            <a href="/settings"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/logout"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <nav class="navbar-default navbar-static-side side-nav" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav side-navbar" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <a href="/welcome">
+                                <img alt="image" class="" src="img/dashboard-logo.png"/>
+                            </a>
+                            <span class="profile-text"><strong class="font-bold">Blue Energy</strong> Wallet</span>
+                        </div>
+                        <div class="logo-element">
+                            IN+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/welcome"><img src="img/dashboard-icon.png"><span class="nav-label">Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="/history"><img src="img/history-icon.png"><span class="nav-label">Transaction History</span></a>
+                    </li>
+                    <li>
+                        <a href="/address"><img src="img/address-icon.png"><span class="nav-label">Account Address</span></a>
+                    </li>
+                    <li>
+                        <a href="/send"><img src="img/send-icon.png"><span class="nav-label">Send</span></a>
+                    </li>
+                    <li>
+                        <a href="/logout"><img src="img/logout-icon.png"><span class="nav-label">Log out</span></a>
+                    </li>
+                </ul>
+                <div class="in_sidebar_bt_links">
+                    <a href="/welcome" target="_blank">Terms</a>
+                    <a href="/welcome" target="_blank">Blog</a>
+                    <a href="/welcome" target="_blank">FAQ</a>
+                </div>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="cotainer-fluid">
+                <div class="row">
+                    <div class="col-md-12 history-part">
+                        <div class="panel-heading">
+                            <span class="panel-title"><span class="title-border">Transc</span>tion History</span>
+                        </div>
+                        <div class="panel-body">
+                            <table class="history-table">
+                                <thead>
+                                    <tr>
+                                        <th width="25%">Date</th>
+                                        <th width="25%">Description</th>
+                                        <th width="25%">Status</th>
+                                        <th >Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <div class="invest-action">
+                                <span class="invest-text">You have no transaction yet.</span>
+                                <span class="invest-text">Would you like to invest?</span>
+                                <a href="/welcome" class="btn1" style="display: inline-block;font-size: 26px;padding-top: 13px;margin-top: 10px;">INVEST NOW</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="pull-right right-text">
+                    Have any questions? Please contact us at support@gmail.com
+                </div>
+                <div class="left-text">
+                    &copy; 2017 Blue Energy, All rights reserved
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mainly scripts -->
+    <!-- <script src="/js/dependencies/sails.io.js"></script> -->
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="js/jquery.qrcode.min.js"></script>
+    <!-- <script src="js/country.js"></script> -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.dropdown-btn').click(function(){
+                $('#side-menu').slideToggle("slow");
+            });
+            $(window).resize(function(){
+                if ($(window).width() > 768) {
+                    $('#side-menu').show();
+                }
+            });
+            //Active control in Choose Payment
+            // $('.currency-link').click(function() {
+            //   $('.currency-link').removeClass('active');
+            //   $('.btn-copy').removeClass('copied');
+            //   $(this).addClass('active');
+            //   var coin = $(this).attr("href");
+            //   $('#qrcode').children().remove();
+            //   if (coin == 'bitcoin') {
+            //     $('.source').text('1LFH5zrPi2i13yGfaahgfAZJYHtECcpS5U');
+            //     $('#qrcode').qrcode({
+            //         width: 200,
+            //         height: 200,
+            //         text: "1LFH5zrPi2i13yGfaahgfAZJYHtECcpS5U"
+            //     });
+
+            //   }else if (coin == 'ethereum') {
+            //     $('.source').text('0x5FC9bEd3Ddde4a05bFAA8638226dC93660f32B6A');
+            //     $('#qrcode').qrcode({
+            //         width: 200,
+            //         height: 200,
+            //         text: "0x5FC9bEd3Ddde4a05bFAA8638226dC93660f32B6A"
+            //     });
+            //   }
+            //   return false;
+            // });
+            $('.btn-copy').click(function(){
+              $(this).addClass('copied');
+                return false;
+            });
+
+            $('#qrcode').qrcode({
+                width: 264,
+                height: 261,
+                text: "1LFH5zrPi2i13yGfaahgfAZJYHtECcpS5U"
+            });
+        });
+        function copyToClipboard() {
+          var $temp = $("<input>");
+          $("body").append($temp);
+          $temp.val($('.source').text()).select();
+          document.execCommand("copy");
+          $temp.remove();
+        }
+        // populateCountries('country');
+    </script>
+    
+</body>
+</html>

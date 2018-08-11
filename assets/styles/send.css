@@ -1,0 +1,81 @@
+.send-part{
+    display: block;
+    max-width: 900px;
+    margin-bottom: 90px;
+
+}
+.part-title{
+    font-family: 'futurabkbt' !important;
+    font-size: 39px;
+    color: #222;
+    display: block;
+    margin-bottom: 10px;
+}
+.part-express{
+    font-family: 'futurabkbt' !important;
+    font-size: 24px;
+    color: #222;
+    display: block;
+    line-height: 25px;
+    margin-bottom: 30px;
+    max-width: 700px;
+}
+.part-service{
+    font-family: 'roboto_regular' !important;
+    font-size: 18px;
+    color: #222;
+}
+.send-data{
+    margin-top: 90px;
+}
+
+.send-data label{
+    font-family: 'futurabkbt' !important;
+    font-size: 18px;
+    color: #384a68;
+}
+.send-data input{
+    display: block;
+    width: 100%;
+    height: 58px;
+    border: 2px solid #293183;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    font-size: 18px;
+    outline: none !important;
+    resize: vertical;
+}
+.send-data textarea{
+    display: block;
+    width: 100%;
+    height: 58px;
+    border: 2px solid #293183;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-top: 15px;
+    font-size: 18px;
+    outline: none !important;
+    resize: vertical;
+}
+
+.send-data .err-text{
+    position: absolute;
+    display: none;
+    top: 90px;
+    color: red !important;
+    font-size: 14px;
+}
+.send-notice{
+    font-size: 20px;
+    color: red;
+    font-family: 'SofiaProLight' !important;
+    line-height: 65px;
+}
+@media (min-width: 992px){
+    .col-md-6{
+        width: 60%;
+    }
+    .col-md-3{
+        width: 20%;
+    }
+}

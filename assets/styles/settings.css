@@ -1,0 +1,250 @@
+#page-wrapper{
+	min-height:800px;
+}
+.settings-panel{
+	max-width: 915px;
+	margin-bottom: 90px !important;
+}
+.settings-panel .nav-tabs{
+	border-bottom: 2px solid #c0c0c0;
+
+}
+.nav-tabs > li > a {
+    color: #c0c0c0;
+    border:none;
+    font-family: 'roboto' !important;
+    font-size: 18px;
+    padding: 5px 0;
+    margin-right:45px;
+    margin-bottom: -1px;
+}
+.settings-panel .nav-tabs > li > a:hover,
+.settings-panel .nav-tabs > li > a:focus{
+	background:transparent;
+	color: #109f94;
+	border:none;
+	/*border-bottom: 2px solid #c0c0c0;*/
+}
+.settings-panel .nav-tabs > li.active > a,
+.settings-panel .nav-tabs > li.active > a:hover,
+.settings-panel .nav-tabs > li.active > a:focus{
+	color: #109f94 !important;
+	border:none;
+	border-bottom: 2px solid #109f94;
+}
+.settings-panel .panel-body{
+	margin-top: 50px;
+}
+
+/*Account*/
+#tab-1 .title-info{
+	font-family: 'futurabkbt' !important;
+	font-size: 20px;
+	color: #484848;
+	text-shadow: 1px 0px 0px #676767;
+	margin-bottom: 5px;
+}
+#tab-1 hr{
+	border-top: 3px solid #c0c0c0;
+	margin-top:40px;
+	margin-right: -70px;
+	margin-bottom: 70px;
+}
+.btn1, .btn3{
+	display: inline-block;
+    float: left;
+	font-size: 26px;
+	padding-top: 14px;
+}
+
+#personal-form{
+	/*border-bottom: 3px solid #c0c0c0;*/
+}
+.account-form .padding1{
+	margin-bottom: 0;
+	margin-top: 20px;
+}
+.account-form .control-label{
+	font-family: 'roboto_light' !important;
+	font-size: 16px;
+	color: #000 !important;
+	text-shadow: 0 0 0;
+}
+.account-form .form-control{
+	background: transparent !important;
+	display: block;
+	height: 45px;
+	padding-left: 15px;
+	color: #000;
+	font-size: 14px;
+	font-family: 'roboto_regular' !important;
+	border-radius: 3px;
+	border: 1px solid #293183;
+}
+label.custom-select{
+	position: relative;
+	display: block;
+}
+.custom-select:after {
+    content: "\f107";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    font-size: 25px;
+    line-height: 42px;
+    padding: 0px 15px;
+    background: #f0f0f0;
+    color: #000;
+    pointer-events: none;
+}
+
+.no-pointer-events .custom-select:after {
+    content: none;
+}
+
+/*Verification*/
+#tab-2 .title-info{
+	font-family: 'futurabkbt' !important;
+	font-size: 39px;
+	color: #000;
+	text-shadow: 1px 0px 0px #000;
+	margin-bottom: 5px;
+}
+.payment-panel{
+	margin-top: 20px !important;
+}
+.payment-panel .nav-tabs{
+	display: inline-block;
+	border-bottom: 2px solid #c0c0c0;
+}
+.payment-panel .nav-tabs > li > a{
+	margin-right: 115px;
+}
+.payment-panel .nav-tabs > li:last-child > a{
+	margin-right: 0;
+}
+.payment-panel .nav-tabs > li > a:hover,
+.payment-panel .nav-tabs > li > a:focus{
+	background:transparent;
+	color: #000;
+	border:none;
+}
+.payment-panel .nav-tabs > li.active > a,
+.payment-panel .nav-tabs > li.active > a:hover,
+.payment-panel .nav-tabs > li.active > a:focus{
+	color: #000 !important;
+	border:none;
+	border-bottom: 2px solid #109f94;
+}
+.pay-pan-title{
+	font-family: 'futurabkbt' !important;
+	font-size: 18px;
+	/*margin-top: 20px;*/
+	display: block;
+	color: #09738e !important;
+	text-shadow: 0px 1px 0 #09738e;
+}
+.express{
+	font-family: 'roboto_regular' !important;
+	font-size: 14px;
+	margin-top: 10px;
+	color: #444;
+}
+
+label.custom-select-bank{
+	position: relative;
+	display: block;
+	max-width: 460px;
+}
+label.custom-select-bank select{
+	background: #fff !important;
+	display: block;
+	height: 50px;
+	padding-left: 15px;
+	color: #000;
+	font-size: 16px;
+	font-family: 'roboto_regular' !important;
+	border-radius: 3px;
+	border: 2px solid #293183 !important;
+	margin: 30px 0;
+}
+.custom-select-bank:after {
+    content: "\f107";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    font-size: 25px;
+    line-height: 50px;
+    padding: 0px 15px;
+    background: #293183;
+    color: #fff;
+    pointer-events: none;
+}
+/*Card*/
+#card-form{
+	margin-top: 30px;
+}
+#card-form label{
+	font-family: 'roboto_regular' !important;
+	font-size: 14px;
+	color: #000;
+	margin-top: 5px;
+}
+#card-form input[type='text']{
+	outline: none;
+	width: 100%;
+	height: 35px;
+	border-radius: 3px;
+	border: 2px solid #293183;
+	padding-left: 10px;
+	background: transparent;
+	color: #000;
+}
+.card-wrapper{
+	display: inline-block;
+    padding: 5px 10px;
+    background: #fff;
+}
+#card-form .row-margin{
+	margin-bottom: 20px;
+}
+#card-form .col-padding{
+	padding: 0 5px;
+}
+.notice-text{
+	color: red;
+	font-size: 14px;
+	font-family: 'roboto_regular' !important;
+	margin-top: 50px;
+}
+.col-item{
+	margin-bottom: 40px;
+}
+.payitem{
+	margin-top: 35px;
+}
+.payitem-title{
+	display: block;
+	float: left;
+	font-family: 'roboto_regular';
+	color: #444;
+	font-size: 15px;
+	width: 160px;
+}
+.payitem-value{
+	display: block;
+	float: left;
+	font-family: 'roboto_regular';
+	font-size: 15px;
+	color: #000 !important;
+}
+.btn-action{
+	margin-top: 40px;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+input[type = 'password']{
+	font-size: 16px !important;
+}

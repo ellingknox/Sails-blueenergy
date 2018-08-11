@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blue Energy Coin</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <!-- <link href="css/animate.css" rel="stylesheet"> -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="styles/fonts.css" rel="stylesheet">
+    <link href="styles/welcome.css" rel="stylesheet" type="text/css">
+    <link href="styles/send.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-static-top navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <a class="btn btn-primary dropdown-btn" href="#"><i class="fa fa-bars"></i></a>
+                <a aria-expanded="false" role="button" href="#" class="dropdown-toggle flag_selected" data-toggle="dropdown"><i class="fa fa-angle-down"></i> ENG&nbsp;&nbsp;<img src="img/flag_eng.png"></a>
+                <ul role="menu" class="dropdown-menu opt_flag">
+                    <li><a href="#">ENG&nbsp;&nbsp;<img src="img/flag_eng.png"></a></li>
+                    <li><a href="#">RUS&nbsp;&nbsp;<img src="img/flag_rus.png"></a></li>
+                    <li><a href="#">SPA&nbsp;&nbsp;<img src="img/flag_spa.png"></a></li>
+                    <li><a href="#">FRA&nbsp;&nbsp;<img src="img/flag_fra.png"></a></li>
+                </ul>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="top-link">
+                    <span class="total-balance"><img src="img/wallet-icon.png" style="margin-top: -5px;"> &nbsp;<span style="color:#384a68;"> FIAT balance: </span>&nbsp;&nbsp;&nbsp;<strong><span id="fiat_val">0</span> </strong></span>
+                </li>
+                <li class="top-link">
+                    <span class="total-balance"><img src="img/balance-icon.png" style="margin-top: -5px;"> &nbsp;<span style="color:#384a68;"> Token balance: </span>&nbsp;&nbsp;&nbsp;<strong><span>0</span> BEAN</strong></span>
+                </li>
+                <li class="dropdown top-link">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa img-icon"><img src="img/alert-icon.png"></i> <i class="fa fa-angle-down white-color"></i></a>
+                    <ul class="dropdown-menu alert-dropdown fa">
+                        <li>
+                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">View All</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown top-link">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa img-icon"><img src="img/user-icon.png"></i><span class="username"> <%=username%> </span><i class="fa fa-angle-down white-color"></i></a>
+                    <ul class="dropdown-menu fa">
+                        <!-- <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                        </li> -->
+                        <li>
+                            <a href="/settings"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/logout"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <nav class="navbar-default navbar-static-side side-nav" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav side-navbar" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <a href="/welcome">
+                                <img alt="image" class="" src="img/dashboard-logo.png" style="display: inline-block;">
+                            </a>
+                            <span class="profile-text"><strong class="font-bold">Blue Energy</strong> Wallet</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/welcome"><img src="img/dashboard-icon.png"><span class="nav-label">Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="/history"><img src="img/history-icon.png"><span class="nav-label">Transaction History</span></a>
+                    </li>
+                    <li>
+                        <a href="/address"><img src="img/address-icon.png"><span class="nav-label">Account Address</span></a>
+                    </li>
+                    <li class="active">
+                        <a href="/send"><img src="img/send-icon.png"><span class="nav-label">Send</span></a>
+                    </li>
+                    <li>
+                        <a href="/logout"><img src="img/logout-icon.png"><span class="nav-label">Log out</span></a>
+                    </li>
+                </ul>
+                <div class="in_sidebar_bt_links">
+                    <a href="/welcome" target="_blank">Terms</a>
+                    <a href="/welcome" target="_blank">Blog</a>
+                    <a href="/welcome" target="_blank">FAQ</a>
+                </div>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="cotainer-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="send-part">
+                            <span class="part-title">Attention!</span>
+                            <span class="part-express">Make sure to only use wallets and exchanges that have officially
+                            confirmed integration of BEAN token.</span>
+                            <p class="part-service">We advise following services:</p>
+                            <p class="part-service">- Wallets: MyEtherWallet;</p>
+                            <form action="" method="post" class="send-data">
+                                <div class="row">
+                                    <div class="col-md-6 form-groub">
+                                        <label>Address:</label>
+                                        <input type="text" name="address" id="address">
+                                        <span class="err-text" id="address-err">* This field is required.</span>
+                                    </div>
+                                    <div class="col-md-3 form-groub">
+                                        <label>Amount(BEAN):</label>
+                                        <input type="text" name="amount" id="amount" onkeypress="return isNumberKey(event)" />
+                                        <span class="err-text" id="amount-err">* This field is required.</span>
+                                    </div>
+                                    <div class="col-md-3 form-groub">
+                                        <label>Amount(FIAT):</label>
+                                        <input type="text" name="fiat" id="fiat" onkeypress="return isNumberKey(event)" />
+                                        <span class="err-text" id="fiat-err">* This field is required.</span>
+                                    </div>
+                                    <div class="col-md-12 form-groub">
+                                        <label>Note (optional):</label>
+                                        <textarea type="text" name="note" id="note"></textarea>
+                                        <span class="err-text" id="note-err">* This field is required</span>
+                                    </div>
+                                    <div class="col-md-12 form-groub">
+                                        <a href="#" class="btn1 action-btn" style="float: right;" id="save_btn">SEND</a>
+                                        <span class="send-notice">WARNING! You are sending token with FIAT</span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="pull-right right-text">
+                    Have any questions? Please contact us at support@gmail.com
+                </div>
+                <div class="left-text">
+                    &copy; 2017 Blue Energy, All rights reserved
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mainly scripts -->
+    <!-- <script src="/js/dependencies/sails.io.js"></script> -->
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="js/jquery.qrcode.min.js"></script>
+    <!-- <script src="js/country.js"></script> -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.dropdown-btn').click(function(){
+                $('#side-menu').slideToggle("slow");
+            });
+            $(window).resize(function(){
+                if ($(window).width() > 768) {
+                    $('#side-menu').show();
+                }
+            });
+            $('#amount').keyup(function(){
+                if ($(this).val() == '') {
+                    var token = 0 ;
+                }else{
+                    var token = parseInt($(this).val());
+                }
+                var nf = token;
+                var bf = 0;
+                var sf = 0;
+                var gf = 0;
+                var uf = 0;
+                var df = 0;
+                var fiat = 0;
+                with (Math){
+                    nf = token;
+                    bf = parseInt(token/100);
+                    sf = parseInt(token/1000);
+                    gf = parseInt(token/10000);
+                    uf = parseInt(token/100000);
+                    df = parseInt(token/1000000);
+                    fiat = parseInt(nf)+parseInt(bf)+parseInt(sf)+parseInt(gf)+parseInt(uf)+parseInt(df);
+                }
+                $('#fiat').val(fiat);
+            });
+            $('#save_btn').click(function(){
+                var text = $(this).text();
+                $(this).text('');
+                $(this).append('<i class="fa fa-spinner"></i>');
+                $('.err-text').fadeOut('fast');
+                if ($('#address').val() == '' ) {
+                    $('#address').focus();
+                    $('#address-err').fadeIn();
+                    $(this).text(text);
+                    return false;
+                }
+                if ($('#amount').val() == '' ) {
+                    $('#amount').focus();
+                    $('#amount-err').fadeIn();
+                    $(this).text(text);
+                    return false;
+                }
+                if ($('#fiat').val() == '' ) {
+                    $('#fiat').focus();
+                    $('#fiat-err').fadeIn();
+                    $(this).text(text);
+                    return false;
+                }
+                if ($('#note').val() == '' ) {
+                    $('#note').focus();
+                    $('#note-err').fadeIn();
+                    $(this).text(text);
+                    return false;
+                }
+                // loadingAction($(this), text);
+                alert('Successfully transferred.');
+                $(this).text(text);
+                return false;
+            });
+            $('.btn-copy').click(function(){
+              $(this).addClass('copied');
+                return false;
+            });
+
+            $('#qrcode').qrcode({
+                width: 264,
+                height: 261,
+                text: "1LFH5zrPi2i13yGfaahgfAZJYHtECcpS5U"
+            });
+        });
+        function isNumberKey(evt){
+            var charcode = (evt.which) ? evt.which : event.keyCode
+            if (charcode > 31 && (charcode < 48 || charcode > 57)) {
+                return false;
+            }
+            return true;
+        };
+        function loadingAction(element, text){
+            setTimeout(function(){
+                element.removeClass('loading');
+                element.text(text);
+            }, 5000);
+        };
+        function copyToClipboard() {
+          var $temp = $("<input>");
+          $("body").append($temp);
+          $temp.val($('.source').text()).select();
+          document.execCommand("copy");
+          $temp.remove();
+        };
+        // populateCountries('country');
+    </script>
+    
+</body>
+</html>
