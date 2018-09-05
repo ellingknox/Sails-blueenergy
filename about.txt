@@ -1,10 +1,16 @@
 Slack:
 	knox1987@icloud.com -> JJH
-	rgkyj.2612@outlook.com -> RG
+	ccc0324.slack.com -> RG
+
+	bizsoftek.slack.com
+	ccc0324.slack.com
+	professional_service2018@outlook.com
+	password: kcc123456
 
 Skype:
 	danil.kuznejob-vip
 	dk1986830@gmail.com -> PKS
+	zhong.jinhu -> JJH
 
 Github:
 	email: knox1987@hotmail.com
@@ -36,3 +42,6 @@ Yahoo:
 Jack:
 	email: wangfeng19881212@outlook.com
 	jack's friend
+
+	hzs8204@hotmail.com -> pay
+	kim.jhon354
